@@ -28,8 +28,7 @@ def user_post():
         return dict(string='você esta Logado !', links=links)
     else:
         response.set_cookie('user', 'None')
-        def logout():
-            links = ['home', 'about', 'contact', 'logout']
-            return dict(string='error, você não esta Logado', links=links)
+        links = ['home', 'about', 'contact', 'logout']
+        return dict(string='error, você não esta Logado', links=links)
 
 run(port=8080)
